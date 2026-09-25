@@ -1,0 +1,21 @@
+name: telegram-post
+on:
+  schedule:
+    - cron: '0,20,40 15-17 * * *'   # 18:00–20:40 МСК каждые 20 мин: отправит всё, у чего подошло время
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/telegram_post.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT: '@clooqs'
+      - run: |
+          if ! git diff --quiet; then
+            git config user.name "clooqs-bot"; git config user.email "bot@clooqs.invalid"
+            git commit -am "Telegram queue: mark sent"; git push
+          fi
