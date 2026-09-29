@@ -103,6 +103,7 @@ def check_buffer(today, results, future_days):
         if not mine:
             results.append((name, False, 'на сегодня поста нет', None))
             continue
+        mine.sort(key=lambda p: p['dueAt'])  # сегодняшний выпуск — самый поздний пост дня
         sent = [p for p in mine if p['status'] == 'sent']
         if sent:
             url = sent[-1]['externalLink']
@@ -220,7 +221,8 @@ def main():
         lines.append('Напиши Клоду в чат завода рилсов — разберёт и перевыложит.')
     loud = bool(bad or crashes or len(ahead) < QUEUE_DAYS_MIN)
     send('\n'.join(lines), loud)
-    if not DRY:
+    # ручной запуск днём не должен отменять вечернюю проверку: отмечаем только проверку после 20:00
+    if not DRY and now.hour >= 20 and today == now.date():
         log['last_checked'] = today.isoformat()
         json.dump(log, open(LOG, 'w'), ensure_ascii=False, indent=2)
 
