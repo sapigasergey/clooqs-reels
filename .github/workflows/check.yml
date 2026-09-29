@@ -1,0 +1,29 @@
+name: release-check
+on:
+  schedule:
+    - cron: '7 18 * * *'    # 21:07 МСК — проверка выпуска
+    - cron: '37 18 * * *'   # 21:37 МСК — страховка, если первый запуск GitHub пропустил
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Проверить ещё раз, даже если сегодня уже проверяли'
+        type: boolean
+        default: true
+permissions:
+  contents: write
+concurrency: release-check
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check_release.py ${{ inputs.force && '--force' || '' }}
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      - run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "clooqs-bot"; git config user.email "bot@clooqs.invalid"
+            git add check-log.json; git commit -m "Release check: log"; git pull --rebase -q; git push
+          fi

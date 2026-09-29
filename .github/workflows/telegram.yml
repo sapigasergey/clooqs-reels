@@ -1,7 +1,7 @@
 name: telegram-post
 on:
   schedule:
-    - cron: '0,20,40 15-17 * * *'   # 18:00–20:40 МСК каждые 20 мин: отправит всё, у чего подошло время
+    - cron: '3,13,23,33,43,53 15-19 * * *'   # 18:03–22:53 МСК каждые 10 мин (не ровные минуты — GitHub реже их пропускает)
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -17,5 +17,5 @@ jobs:
       - run: |
           if ! git diff --quiet; then
             git config user.name "clooqs-bot"; git config user.email "bot@clooqs.invalid"
-            git commit -am "Telegram queue: mark sent"; git push
+            git commit -am "Telegram queue: mark sent"; git pull --rebase -q; git push
           fi
