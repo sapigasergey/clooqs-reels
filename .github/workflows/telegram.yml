@@ -5,11 +5,14 @@ on:
   workflow_dispatch: {}
 permissions:
   contents: write
+concurrency: telegram-post   # два запуска подряд не должны отправить одно и то же дважды
 jobs:
   post:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # свежая очередь с отметками sent, а не снимок на момент запуска
       - run: python3 scripts/telegram_post.py
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
