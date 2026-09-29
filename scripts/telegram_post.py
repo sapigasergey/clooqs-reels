@@ -39,9 +39,37 @@ def fetch(url):
     return urllib.request.urlopen(url, timeout=300).read()
 
 
+def probe(data):
+    """Размеры, длительность и обложка ролика через ffmpeg (есть на раннерах GitHub).
+    Без width/height Telegram показывает вертикальное видео квадратом."""
+    import subprocess, tempfile
+    fields, thumb = {}, None
+    with tempfile.TemporaryDirectory() as tmp:
+        src, jpg = os.path.join(tmp, 'v.mp4'), os.path.join(tmp, 't.jpg')
+        open(src, 'wb').write(data)
+        try:
+            out = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries',
+                                  'stream=width,height:format=duration', '-of', 'json', src],
+                                 capture_output=True, text=True, check=True).stdout
+            info = json.loads(out)
+            st = info['streams'][0]
+            fields = {'width': str(st['width']), 'height': str(st['height']),
+                      'duration': str(round(float(info['format']['duration'])))}
+            subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', '1', '-i', src, '-frames:v', '1',
+                            '-vf', 'scale=320:-2', '-q:v', '5', jpg], check=True)
+            thumb = open(jpg, 'rb').read()
+        except Exception as e:
+            print('ffprobe не сработал:', e, file=sys.stderr)
+    return fields, thumb
+
+
 def send_video(chat, url, caption):
-    return call('sendVideo', {'chat_id': chat, 'caption': caption, 'supports_streaming': 'true'},
-                {'video': (url.rsplit('/', 1)[-1], fetch(url))})
+    data = fetch(url)
+    fields, thumb = probe(data)
+    files = {'video': (url.rsplit('/', 1)[-1], data)}
+    if thumb:
+        files['thumbnail'] = ('thumb.jpg', thumb)
+    return call('sendVideo', dict({'chat_id': chat, 'caption': caption, 'supports_streaming': 'true'}, **fields), files)
 
 
 queue = json.load(open(QUEUE))
