@@ -1,18 +1,20 @@
 {
-  "updated": "2026-10-01T23:28+03:00",
+  "updated": "2026-10-02T01:36+03:00",
   "items": {
     "Восточный ролик": {
       "title": "Восточный ролик",
       "date": "2026-10-01",
       "platforms": {
         "YouTube": 0,
-        "TikTok": 95,
+        "TikTok": 161,
+        "Facebook": 0,
+        "Threads": 0,
         "Telegram": 1
       },
-      "total": 96,
-      "day": "2026-10-01",
+      "total": 162,
+      "day": "2026-10-02",
       "day_start_total": 96,
-      "delta": 0
+      "delta": 66
     },
     "Ретро скорпионс": {
       "title": "Ретро скорпионс",
@@ -24,7 +26,7 @@
         "Threads": 2
       },
       "total": 500,
-      "day": "2026-10-01",
+      "day": "2026-10-02",
       "day_start_total": 500,
       "delta": 0
     },
@@ -40,7 +42,7 @@
         "Telegram": 2
       },
       "total": 1900,
-      "day": "2026-10-01",
+      "day": "2026-10-02",
       "day_start_total": 1900,
       "delta": 0
     },
@@ -56,7 +58,7 @@
         "Telegram": 3
       },
       "total": 1399,
-      "day": "2026-10-01",
+      "day": "2026-10-02",
       "day_start_total": 1399,
       "delta": 0
     },
@@ -72,7 +74,7 @@
         "Telegram": 4
       },
       "total": 428,
-      "day": "2026-10-01",
+      "day": "2026-10-02",
       "day_start_total": 428,
       "delta": 0
     },
@@ -88,7 +90,7 @@
         "Telegram": 4
       },
       "total": 724,
-      "day": "2026-10-01",
+      "day": "2026-10-02",
       "day_start_total": 724,
       "delta": 0
     },
@@ -103,7 +105,7 @@
         "Facebook": 368
       },
       "total": 2679,
-      "day": "2026-10-01",
+      "day": "2026-10-02",
       "day_start_total": 2679,
       "delta": 0
     }
