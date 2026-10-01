@@ -275,7 +275,11 @@ def collect_views(now):
 
 def views_lines(data, limit=10):
     ranked = sorted(data['items'].items(), key=lambda kv: -kv[1]['total'])[:limit]
-    out = ['👀 Просмотры, все площадки (за сутки):']
+    total = sum(it['total'] for it in data['items'].values())
+    delta = sum(it['delta'] for it in data['items'].values())
+    out = ['👀 Всего просмотров: %s%s' % (format(total, ',').replace(',', ' '),
+                                        (' (+%s за сутки)' % format(delta, ',').replace(',', ' ')) if delta > 0 else ''),
+           '', 'По роликам:']
     for key, it in ranked:
         d = datetime.date.fromisoformat(it['date'])
         out.append('%s %s — %s%s' % (d.strftime('%d.%m'), it['title'], format(it['total'], ',').replace(',', ' '),
