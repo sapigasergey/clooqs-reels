@@ -27,5 +27,5 @@ jobs:
       - run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "clooqs-bot"; git config user.email "bot@clooqs.invalid"
-            git add check-log.json; git commit -m "Release check: log"; git pull --rebase -q; git push
+            git add check-log.json views.json; git commit -m "Release check: log"; git pull --rebase -q; git push
           fi

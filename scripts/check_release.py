@@ -181,6 +181,108 @@ def send(text, loud):
         sys.exit(1)
 
 
+# ---------- просмотры: по всем вышедшим роликам, ключ — первая строка подписи ----------
+VIEWS = 'views.json'
+# подпись → название ролика (как папка в Видео/); пополняется при постановке выпуска
+TITLES = json.load(open('titles.json')) if os.path.exists('titles.json') else {}
+
+
+def num(text):
+    """«1.2K» / «12,3 тыс» / «950» → int."""
+    t = text.strip().replace(',', '.').replace('\xa0', '').replace(' ', '').upper()
+    mult = 1000 if ('K' in t or 'ТЫС' in t) else 1000000 if ('M' in t or 'МЛН' in t) else 1
+    digits = ''.join(ch for ch in t if ch.isdigit() or ch == '.')
+    return int(float(digits) * mult) if digits else 0
+
+
+def live_views(platform, url):
+    """Свежие просмотры со страницы площадки (Buffer отдаёт их с опозданием на сутки)."""
+    import re
+    if not url:
+        return None
+    if platform == 'YouTube':
+        vid = url.rstrip('/').split('/')[-1].split('?')[0]
+        code, body = http('https://www.youtube.com/watch?v=' + vid, headers={'Accept-Language': 'en'})
+        m = re.search(rb'"viewCount":"(\d+)"', body)
+    elif platform == 'TikTok':
+        code, body = http(url.split('?')[0].replace('://tiktok.com', '://www.tiktok.com'))
+        m = re.search(rb'"playCount":(\d+)', body)
+    else:
+        return None
+    return int(m.group(1)) if m else None
+
+
+def collect_views(now):
+    import re
+    items = {}
+
+    def add(caption, when, platform, n):
+        if n is None or not caption:
+            return
+        key = ' '.join(caption.lower().split())[:24]  # TikTok и др. склеивают строки — сравниваем начало
+        it = items.setdefault(key, {'date': when.astimezone(MSK).date().isoformat(), 'platforms': {}})
+        it['title'] = TITLES.get(key) or it.get('title') or caption.strip().split('\n')[0][:40]
+        it['date'] = min(it['date'], when.astimezone(MSK).date().isoformat())
+        it['platforms'][platform] = max(it['platforms'].get(platform, 0), n)
+
+    start = now - datetime.timedelta(days=90)
+    q = '{ posts(first: 100, input: {organizationId: "%s", filter: {dueAt: {start: "%s", end: "%s"}}}) ' \
+        '{ edges { node { status dueAt text channelId externalLink metrics { type value } } } } }' % (ORG, iso(start), iso(now))
+    for e in buffer(q)['posts']['edges']:
+        p = e['node']
+        if p['status'] != 'sent':
+            continue
+        name = BUFFER_CHANNELS.get(p['channelId'])
+        n = live_views(name, p['externalLink'])
+        if n is None:
+            n = next((int(m['value']) for m in (p.get('metrics') or []) if m['type'] == 'views'), None)
+        add(p['text'], parse(p['dueAt']), name, n)
+
+    # Zernio: список /analytics отдаёт и посты с отключёнными аккаунтами (в /posts их нет)
+    for p in zernio('/analytics?limit=100').get('posts', []):
+        name = ZERNIO_PLATFORMS.get(p.get('platform'))
+        if name and p.get('status') == 'published':
+            add(p.get('content', ''), parse(p.get('publishedAt') or p['scheduledFor']), name, (p.get('analytics') or {}).get('views'))
+
+    code, body = http('https://t.me/s/' + PUBLIC_CHANNEL)
+    tg = {int(m.group(1)): num(m.group(2).decode()) for m in re.finditer(
+        rb'data-post="%s/(\d+)".*?tgme_widget_message_views">([^<]+)<' % PUBLIC_CHANNEL.encode(), body, re.S)}
+    for i in json.load(open('telegram-queue.json')):
+        if 'video' in i and i.get('sent') and isinstance(i.get('message_id'), int) and i['message_id'] in tg:
+            add(i.get('caption', ''), parse(i['at']), 'Telegram', tg[i['message_id']])
+
+    merged = {}  # один ролик мог выйти с разными подписями (Скорпионс руками) — склеиваем по названию
+    for it in items.values():
+        m = merged.setdefault(it['title'], {'title': it['title'], 'date': it['date'], 'platforms': {}})
+        m['date'] = min(m['date'], it['date'])
+        for k, v in it['platforms'].items():
+            m['platforms'][k] = max(m['platforms'].get(k, 0), v)
+    items = merged
+    old = json.load(open(VIEWS)) if os.path.exists(VIEWS) else {}
+    for key, it in items.items():
+        it['total'] = sum(it['platforms'].values())
+        prev = (old.get('items') or {}).get(key, {})
+        # прирост считаем к прошлому дню, а не к прошлому запуску (запусков в день бывает несколько)
+        base = prev.get('day_start_total') if prev.get('day') == now.date().isoformat() else prev.get('total')
+        it['day'] = now.date().isoformat()
+        it['day_start_total'] = base if base is not None else it['total']
+        it['delta'] = it['total'] - it['day_start_total']
+    data = {'updated': now.isoformat(timespec='minutes'), 'items': items}
+    if not DRY:
+        json.dump(data, open(VIEWS, 'w'), ensure_ascii=False, indent=2)
+    return data
+
+
+def views_lines(data, limit=10):
+    ranked = sorted(data['items'].items(), key=lambda kv: -kv[1]['total'])[:limit]
+    out = ['👀 Просмотры, все площадки (за сутки):']
+    for key, it in ranked:
+        d = datetime.date.fromisoformat(it['date'])
+        out.append('%s %s — %s%s' % (d.strftime('%d.%m'), it['title'], format(it['total'], ',').replace(',', ' '),
+                                     (' (+%s)' % format(it['delta'], ',').replace(',', ' ')) if it['delta'] > 0 else ''))
+    return out
+
+
 def main():
     now = datetime.datetime.now(MSK)
     today = datetime.date.fromisoformat(os.environ['CHECK_DATE']) if os.environ.get('CHECK_DATE') else now.date()
@@ -216,6 +318,10 @@ def main():
         lines.append('')
         lines.append('📭 В очереди дней: %d%s. Нужно минимум %d — пора ставить новые ролики.' % (
             len(ahead), (' (' + ', '.join(d.strftime('%d.%m') for d in ahead) + ')') if ahead else '', QUEUE_DAYS_MIN))
+    try:
+        lines += [''] + views_lines(collect_views(now))
+    except Exception as e:
+        lines += ['', 'Просмотры собрать не вышло: %s' % e]
     if bad or crashes:
         lines.append('')
         lines.append('Напиши Клоду в чат завода рилсов — разберёт и перевыложит.')
