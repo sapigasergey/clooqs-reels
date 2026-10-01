@@ -1,20 +1,20 @@
 {
-  "updated": "2026-10-02T01:36+03:00",
+  "updated": "2026-10-02T01:52+03:00",
   "items": {
     "Восточный ролик": {
       "title": "Восточный ролик",
       "date": "2026-10-01",
       "platforms": {
         "YouTube": 0,
-        "TikTok": 161,
+        "TikTok": 163,
         "Facebook": 0,
         "Threads": 0,
         "Telegram": 1
       },
-      "total": 162,
+      "total": 164,
       "day": "2026-10-02",
       "day_start_total": 96,
-      "delta": 66
+      "delta": 68
     },
     "Ретро скорпионс": {
       "title": "Ретро скорпионс",
