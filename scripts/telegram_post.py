@@ -63,14 +63,19 @@ def probe(data):
     return fields, thumb
 
 
-def send_video(chat, url, caption):
+def send_video(item, chat):
+    """Размеры обязательны: без width/height Telegram рисует вертикальное видео квадратом.
+    Берём из записи очереди (их пишет Клод при постановке), иначе из ffprobe; не узнали — не отправляем."""
+    url = item['video']
     data = fetch(url)
-    fields, thumb = probe(data)
+    probed, thumb = probe(data)
+    fields = {k: str(item[k]) for k in ('width', 'height', 'duration') if item.get(k)} or probed
+    if not fields.get('width') or not fields.get('height'):
+        return {'ok': False, 'description': 'не знаю размеры ролика — без них Telegram покажет квадрат; впиши width/height в очередь'}
     files = {'video': (url.rsplit('/', 1)[-1], data)}
     if thumb:
         files['thumbnail'] = ('thumb.jpg', thumb)
-    return call('sendVideo', dict({'chat_id': chat, 'caption': caption, 'supports_streaming': 'true'}, **fields), files)
-
+    return call('sendVideo', dict({'chat_id': chat, 'caption': item.get('caption', ''), 'supports_streaming': 'true'}, **fields), files)
 
 queue = json.load(open(QUEUE))
 now = datetime.datetime.now(datetime.timezone.utc)
@@ -91,7 +96,7 @@ for item in queue:
                 break
             ids.append(r['result']['message_id'])
     else:
-        r = send_video(chat, item['video'], item.get('caption', ''))
+        r = send_video(item, chat)
         ok = r.get('ok', False)
         if ok:
             ids.append(r['result']['message_id'])

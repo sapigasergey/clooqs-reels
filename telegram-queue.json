@@ -158,7 +158,10 @@
   {
     "at": "2026-10-03T19:00:00+03:00",
     "video": "https://sapigasergey.github.io/clooqs-reels/r/2026-10-03-triko.mp4",
-    "caption": "трико, косуха, тренч — три образа за 10 секунд\nобразы от людей — в Clooqs"
+    "caption": "трико, косуха, тренч — три образа за 10 секунд\nобразы от людей — в Clooqs",
+    "width": 1080,
+    "height": 1920,
+    "duration": 10
   },
   {
     "at": "2026-10-04T18:40:00+03:00",
@@ -179,6 +182,9 @@
   {
     "at": "2026-10-04T19:00:00+03:00",
     "video": "https://sapigasergey.github.io/clooqs-reels/r/2026-10-04-leto.mp4",
-    "caption": "из лета в осень — один образ за другим\nобразы от людей — в Clooqs\nскачать: clooqs.com/app"
+    "caption": "из лета в осень — один образ за другим\nобразы от людей — в Clooqs\nскачать: clooqs.com/app",
+    "width": 1080,
+    "height": 1920,
+    "duration": 10
   }
 ]
