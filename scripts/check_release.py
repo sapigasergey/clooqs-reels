@@ -165,7 +165,15 @@ def check_telegram(today, results, future_days):
     url = 'https://t.me/%s/%s' % (PUBLIC_CHANNEL, i['message_id'])
     code, body = http('https://t.me/s/' + PUBLIC_CHANNEL)
     seen = ('data-post="%s/%s"' % (PUBLIC_CHANNEL, i['message_id'])).encode() in body
-    results.append(('Telegram', seen, 'вышло' if seen else 'в канале сообщения не видно', url))
+    if not seen:
+        results.append(('Telegram', False, 'в канале сообщения не видно', url))
+        return
+    # вертикаль: без width/height Telegram рисует квадрат (padding-top:100%), нормальный ролик — выше 100%
+    import re
+    code, emb = http(url + '?embed=1')
+    m = re.search(rb'message_video_wrap"[^>]*padding-top:([0-9.]+)%', emb)
+    square = m is not None and float(m.group(1)) <= 100.5
+    results.append(('Telegram', not square, 'вышло, но КВАДРАТОМ — надо перезалить с размерами' if square else 'вышло', url))
 
 
 def send(text, loud):
