@@ -298,6 +298,10 @@ def views_lines(data, limit=10):
 def main():
     now = datetime.datetime.now(MSK)
     today = datetime.date.fromisoformat(os.environ['CHECK_DATE']) if os.environ.get('CHECK_DATE') else now.date()
+    if not os.environ.get('CHECK_DATE') and now.hour < 19:
+        # до 19:00 сегодняшний ролик ещё не выходил: запоздавший запуск (GitHub бывает опаздывает
+        # на часы) проверяет вчерашний выпуск, а не пугает крестиками по сегодняшнему
+        today = now.date() - datetime.timedelta(days=1)
     log = json.load(open(LOG)) if os.path.exists(LOG) else {}
     if log.get('last_checked') == today.isoformat() and '--force' not in sys.argv and not DRY:
         print('сегодня уже проверяли')  # второй запуск cron — страховка, если первый GitHub пропустил
@@ -340,7 +344,7 @@ def main():
     loud = bool(bad or crashes or len(ahead) < QUEUE_DAYS_MIN)
     send('\n'.join(lines), loud)
     # ручной запуск днём не должен отменять вечернюю проверку: отмечаем только проверку после 20:00
-    if not DRY and now.hour >= 20 and today == now.date():
+    if not DRY and now >= datetime.datetime.combine(today, datetime.time(20), MSK):
         log['last_checked'] = today.isoformat()
         json.dump(log, open(LOG, 'w'), ensure_ascii=False, indent=2)
 
