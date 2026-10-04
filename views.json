@@ -1,36 +1,52 @@
 {
-  "updated": "2026-10-03T21:08+03:00",
+  "updated": "2026-10-04T21:08+03:00",
   "items": {
+    "Лето осень": {
+      "title": "Лето осень",
+      "date": "2026-10-04",
+      "platforms": {
+        "YouTube": 0,
+        "TikTok": 359,
+        "Facebook": 0,
+        "Threads": 0,
+        "Telegram": 1
+      },
+      "total": 360,
+      "day": "2026-10-04",
+      "day_start_total": 360,
+      "delta": 0
+    },
     "Трико": {
       "title": "Трико",
       "date": "2026-10-03",
       "platforms": {
         "YouTube": 0,
-        "TikTok": 161,
-        "Facebook": 3,
-        "Threads": 1,
-        "Telegram": 2
+        "TikTok": 264,
+        "Instagram": 9,
+        "Facebook": 237,
+        "Threads": 2,
+        "Telegram": 3
       },
-      "total": 167,
-      "day": "2026-10-03",
+      "total": 515,
+      "day": "2026-10-04",
       "day_start_total": 167,
-      "delta": 0
+      "delta": 348
     },
     "Замок и туфли": {
       "title": "Замок и туфли",
       "date": "2026-10-02",
       "platforms": {
         "YouTube": 589,
-        "TikTok": 272,
-        "Instagram": 110,
-        "Facebook": 241,
+        "TikTok": 273,
+        "Instagram": 115,
+        "Facebook": 242,
         "Threads": 0,
         "Telegram": 3
       },
-      "total": 1215,
-      "day": "2026-10-03",
-      "day_start_total": 173,
-      "delta": 1042
+      "total": 1222,
+      "day": "2026-10-04",
+      "day_start_total": 1215,
+      "delta": 7
     },
     "Восточный ролик": {
       "title": "Восточный ролик",
@@ -38,15 +54,15 @@
       "platforms": {
         "YouTube": 220,
         "TikTok": 254,
-        "Instagram": 14,
-        "Facebook": 258,
+        "Instagram": 15,
+        "Facebook": 260,
         "Threads": 3,
         "Telegram": 3
       },
-      "total": 752,
-      "day": "2026-10-03",
-      "day_start_total": 570,
-      "delta": 182
+      "total": 755,
+      "day": "2026-10-04",
+      "day_start_total": 752,
+      "delta": 3
     },
     "Ретро скорпионс": {
       "title": "Ретро скорпионс",
@@ -58,9 +74,9 @@
         "Threads": 2
       },
       "total": 501,
-      "day": "2026-10-03",
-      "day_start_total": 499,
-      "delta": 2
+      "day": "2026-10-04",
+      "day_start_total": 501,
+      "delta": 0
     },
     "Подростки": {
       "title": "Подростки",
@@ -68,15 +84,15 @@
       "platforms": {
         "YouTube": 1389,
         "TikTok": 250,
-        "Instagram": 68,
+        "Instagram": 69,
         "Threads": 1,
         "Facebook": 210,
         "Telegram": 3
       },
-      "total": 1921,
-      "day": "2026-10-03",
-      "day_start_total": 1911,
-      "delta": 10
+      "total": 1922,
+      "day": "2026-10-04",
+      "day_start_total": 1921,
+      "delta": 1
     },
     "Бали": {
       "title": "Бали",
@@ -84,15 +100,15 @@
       "platforms": {
         "YouTube": 881,
         "TikTok": 249,
-        "Instagram": 18,
-        "Facebook": 271,
+        "Instagram": 19,
+        "Facebook": 272,
         "Threads": 1,
-        "Telegram": 3
+        "Telegram": 4
       },
-      "total": 1423,
-      "day": "2026-10-03",
-      "day_start_total": 1421,
-      "delta": 2
+      "total": 1426,
+      "day": "2026-10-04",
+      "day_start_total": 1423,
+      "delta": 3
     },
     "Платок": {
       "title": "Платок",
@@ -106,9 +122,9 @@
         "Telegram": 5
       },
       "total": 433,
-      "day": "2026-10-03",
-      "day_start_total": 431,
-      "delta": 2
+      "day": "2026-10-04",
+      "day_start_total": 433,
+      "delta": 0
     },
     "Крыша": {
       "title": "Крыша",
@@ -119,12 +135,12 @@
         "TikTok": 257,
         "Facebook": 246,
         "Threads": 2,
-        "Telegram": 4
+        "Telegram": 5
       },
-      "total": 729,
-      "day": "2026-10-03",
+      "total": 730,
+      "day": "2026-10-04",
       "day_start_total": 729,
-      "delta": 0
+      "delta": 1
     },
     "Лошадь": {
       "title": "Лошадь",
@@ -137,7 +153,7 @@
         "Facebook": 369
       },
       "total": 2681,
-      "day": "2026-10-03",
+      "day": "2026-10-04",
       "day_start_total": 2681,
       "delta": 0
     }
