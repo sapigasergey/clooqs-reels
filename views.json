@@ -1,36 +1,52 @@
 {
-  "updated": "2026-10-08T02:00+03:00",
+  "updated": "2026-10-08T21:08+03:00",
   "items": {
+    "Панк-коллаж": {
+      "title": "Панк-коллаж",
+      "date": "2026-10-08",
+      "platforms": {
+        "YouTube": 0,
+        "TikTok": 153,
+        "Facebook": 0,
+        "Threads": 4,
+        "Telegram": 3
+      },
+      "total": 160,
+      "day": "2026-10-08",
+      "day_start_total": 160,
+      "delta": 0
+    },
     "Девушка на верблюде": {
       "title": "Девушка на верблюде",
       "date": "2026-10-07",
       "platforms": {
-        "YouTube": 0,
-        "TikTok": 254,
-        "Facebook": 237,
+        "YouTube": 150,
+        "TikTok": 260,
+        "Instagram": 11,
+        "Facebook": 238,
         "Threads": 1,
-        "Telegram": 1
+        "Telegram": 3
       },
-      "total": 493,
+      "total": 663,
       "day": "2026-10-08",
       "day_start_total": 493,
-      "delta": 0
+      "delta": 170
     },
     "Вжух": {
       "title": "Вжух",
       "date": "2026-10-06",
       "platforms": {
-        "YouTube": 1,
-        "TikTok": 252,
-        "Instagram": 128,
+        "YouTube": 455,
+        "TikTok": 254,
+        "Instagram": 132,
         "Facebook": 205,
         "Threads": 0,
         "Telegram": 3
       },
-      "total": 589,
+      "total": 1049,
       "day": "2026-10-08",
       "day_start_total": 191,
-      "delta": 398
+      "delta": 858
     },
     "Пальто из маминого шкафа": {
       "title": "Пальто из маминого шкафа",
@@ -38,31 +54,31 @@
       "platforms": {
         "YouTube": 695,
         "TikTok": 230,
-        "Instagram": 143,
+        "Instagram": 145,
         "Facebook": 245,
         "Threads": 1,
         "Telegram": 3
       },
-      "total": 1317,
+      "total": 1319,
       "day": "2026-10-08",
       "day_start_total": 1093,
-      "delta": 224
+      "delta": 226
     },
     "Лето осень": {
       "title": "Лето осень",
       "date": "2026-10-04",
       "platforms": {
-        "YouTube": 139,
+        "YouTube": 142,
         "TikTok": 774,
         "Instagram": 124,
         "Facebook": 293,
         "Threads": 0,
-        "Telegram": 3
+        "Telegram": 4
       },
-      "total": 1333,
+      "total": 1337,
       "day": "2026-10-08",
       "day_start_total": 1325,
-      "delta": 8
+      "delta": 12
     },
     "Трико": {
       "title": "Трико",
@@ -73,28 +89,28 @@
         "Instagram": 11,
         "Facebook": 237,
         "Threads": 2,
-        "Telegram": 3
+        "Telegram": 4
       },
-      "total": 853,
+      "total": 854,
       "day": "2026-10-08",
       "day_start_total": 851,
-      "delta": 2
+      "delta": 3
     },
     "Замок и туфли": {
       "title": "Замок и туфли",
       "date": "2026-10-02",
       "platforms": {
-        "YouTube": 837,
+        "YouTube": 839,
         "TikTok": 275,
         "Instagram": 117,
         "Facebook": 242,
         "Threads": 0,
-        "Telegram": 3
+        "Telegram": 4
       },
-      "total": 1474,
+      "total": 1477,
       "day": "2026-10-08",
       "day_start_total": 1474,
-      "delta": 0
+      "delta": 3
     },
     "Восточный ролик": {
       "title": "Восточный ролик",
@@ -102,15 +118,15 @@
       "platforms": {
         "YouTube": 256,
         "TikTok": 254,
-        "Instagram": 16,
-        "Facebook": 263,
+        "Instagram": 17,
+        "Facebook": 264,
         "Threads": 3,
-        "Telegram": 3
+        "Telegram": 4
       },
-      "total": 795,
+      "total": 798,
       "day": "2026-10-08",
       "day_start_total": 795,
-      "delta": 0
+      "delta": 3
     },
     "Ретро скорпионс": {
       "title": "Ретро скорпионс",
@@ -130,49 +146,49 @@
       "title": "Подростки",
       "date": "2026-09-30",
       "platforms": {
-        "YouTube": 1390,
+        "YouTube": 1391,
         "TikTok": 250,
         "Instagram": 69,
         "Threads": 1,
         "Facebook": 210,
-        "Telegram": 3
+        "Telegram": 4
       },
-      "total": 1923,
+      "total": 1925,
       "day": "2026-10-08",
       "day_start_total": 1923,
-      "delta": 0
+      "delta": 2
     },
     "Бали": {
       "title": "Бали",
       "date": "2026-09-29",
       "platforms": {
-        "YouTube": 882,
+        "YouTube": 883,
         "TikTok": 250,
         "Instagram": 19,
         "Facebook": 272,
         "Threads": 1,
         "Telegram": 4
       },
-      "total": 1428,
+      "total": 1429,
       "day": "2026-10-08",
       "day_start_total": 1427,
-      "delta": 1
+      "delta": 2
     },
     "Платок": {
       "title": "Платок",
       "date": "2026-09-28",
       "platforms": {
         "TikTok": 230,
-        "YouTube": 13,
+        "YouTube": 14,
         "Instagram": 18,
         "Facebook": 170,
         "Threads": 1,
         "Telegram": 5
       },
-      "total": 437,
+      "total": 438,
       "day": "2026-10-08",
       "day_start_total": 437,
-      "delta": 0
+      "delta": 1
     },
     "Крыша": {
       "title": "Крыша",
