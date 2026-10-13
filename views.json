@@ -1,21 +1,21 @@
 {
-  "updated": "2026-10-12T21:08+03:00",
+  "updated": "2026-10-13T21:08+03:00",
   "items": {
     "Панк-коллаж": {
       "title": "Панк-коллаж",
       "date": "2026-10-08",
       "platforms": {
-        "YouTube": 85,
+        "YouTube": 87,
         "Instagram": 10,
         "TikTok": 259,
         "Facebook": 259,
         "Threads": 10,
         "Telegram": 3
       },
-      "total": 626,
-      "day": "2026-10-12",
+      "total": 628,
+      "day": "2026-10-13",
       "day_start_total": 626,
-      "delta": 0
+      "delta": 2
     },
     "Девушка на верблюде": {
       "title": "Девушка на верблюде",
@@ -29,7 +29,7 @@
         "Telegram": 3
       },
       "total": 708,
-      "day": "2026-10-12",
+      "day": "2026-10-13",
       "day_start_total": 708,
       "delta": 0
     },
@@ -45,7 +45,7 @@
         "Telegram": 3
       },
       "total": 1206,
-      "day": "2026-10-12",
+      "day": "2026-10-13",
       "day_start_total": 1206,
       "delta": 0
     },
@@ -61,7 +61,7 @@
         "Telegram": 3
       },
       "total": 1322,
-      "day": "2026-10-12",
+      "day": "2026-10-13",
       "day_start_total": 1322,
       "delta": 0
     },
@@ -77,9 +77,9 @@
         "Telegram": 4
       },
       "total": 1342,
-      "day": "2026-10-12",
-      "day_start_total": 1340,
-      "delta": 2
+      "day": "2026-10-13",
+      "day_start_total": 1342,
+      "delta": 0
     },
     "Трико": {
       "title": "Трико",
@@ -93,7 +93,7 @@
         "Telegram": 4
       },
       "total": 854,
-      "day": "2026-10-12",
+      "day": "2026-10-13",
       "day_start_total": 854,
       "delta": 0
     },
@@ -101,17 +101,17 @@
       "title": "Замок и туфли",
       "date": "2026-10-02",
       "platforms": {
-        "YouTube": 839,
+        "YouTube": 840,
         "TikTok": 275,
         "Instagram": 117,
         "Facebook": 243,
         "Threads": 0,
         "Telegram": 4
       },
-      "total": 1478,
-      "day": "2026-10-12",
+      "total": 1479,
+      "day": "2026-10-13",
       "day_start_total": 1478,
-      "delta": 0
+      "delta": 1
     },
     "Восточный ролик": {
       "title": "Восточный ролик",
@@ -125,7 +125,7 @@
         "Telegram": 4
       },
       "total": 798,
-      "day": "2026-10-12",
+      "day": "2026-10-13",
       "day_start_total": 798,
       "delta": 0
     },
@@ -139,7 +139,7 @@
         "Threads": 2
       },
       "total": 502,
-      "day": "2026-10-12",
+      "day": "2026-10-13",
       "day_start_total": 502,
       "delta": 0
     },
@@ -155,7 +155,7 @@
         "Telegram": 4
       },
       "total": 1926,
-      "day": "2026-10-12",
+      "day": "2026-10-13",
       "day_start_total": 1926,
       "delta": 0
     },
@@ -171,7 +171,7 @@
         "Telegram": 4
       },
       "total": 1429,
-      "day": "2026-10-12",
+      "day": "2026-10-13",
       "day_start_total": 1429,
       "delta": 0
     },
@@ -179,17 +179,17 @@
       "title": "Платок",
       "date": "2026-09-28",
       "platforms": {
-        "TikTok": 230,
+        "TikTok": 231,
         "YouTube": 14,
         "Instagram": 18,
         "Facebook": 170,
         "Threads": 1,
         "Telegram": 5
       },
-      "total": 438,
-      "day": "2026-10-12",
+      "total": 439,
+      "day": "2026-10-13",
       "day_start_total": 438,
-      "delta": 0
+      "delta": 1
     },
     "Крыша": {
       "title": "Крыша",
@@ -203,7 +203,7 @@
         "Telegram": 5
       },
       "total": 732,
-      "day": "2026-10-12",
+      "day": "2026-10-13",
       "day_start_total": 732,
       "delta": 0
     },
@@ -218,7 +218,7 @@
         "Facebook": 369
       },
       "total": 2683,
-      "day": "2026-10-12",
+      "day": "2026-10-13",
       "day_start_total": 2683,
       "delta": 0
     }
