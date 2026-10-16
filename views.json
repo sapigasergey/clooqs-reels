@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T21:08+03:00",
+  "updated": "2026-10-16T21:08+03:00",
   "items": {
     "Панк-коллаж": {
       "title": "Панк-коллаж",
@@ -7,15 +7,15 @@
       "platforms": {
         "YouTube": 93,
         "Instagram": 10,
-        "TikTok": 264,
+        "TikTok": 266,
         "Facebook": 259,
         "Threads": 10,
         "Telegram": 3
       },
-      "total": 639,
-      "day": "2026-10-15",
-      "day_start_total": 634,
-      "delta": 5
+      "total": 641,
+      "day": "2026-10-16",
+      "day_start_total": 639,
+      "delta": 2
     },
     "Девушка на верблюде": {
       "title": "Девушка на верблюде",
@@ -29,9 +29,9 @@
         "Telegram": 3
       },
       "total": 709,
-      "day": "2026-10-15",
-      "day_start_total": 708,
-      "delta": 1
+      "day": "2026-10-16",
+      "day_start_total": 709,
+      "delta": 0
     },
     "Вжух": {
       "title": "Вжух",
@@ -45,9 +45,9 @@
         "Telegram": 3
       },
       "total": 1207,
-      "day": "2026-10-15",
-      "day_start_total": 1206,
-      "delta": 1
+      "day": "2026-10-16",
+      "day_start_total": 1207,
+      "delta": 0
     },
     "Пальто из маминого шкафа": {
       "title": "Пальто из маминого шкафа",
@@ -55,15 +55,15 @@
       "platforms": {
         "YouTube": 698,
         "TikTok": 230,
-        "Instagram": 145,
+        "Instagram": 146,
         "Facebook": 245,
         "Threads": 1,
         "Telegram": 3
       },
-      "total": 1322,
-      "day": "2026-10-15",
+      "total": 1323,
+      "day": "2026-10-16",
       "day_start_total": 1322,
-      "delta": 0
+      "delta": 1
     },
     "Лето осень": {
       "title": "Лето осень",
@@ -77,7 +77,7 @@
         "Telegram": 4
       },
       "total": 1342,
-      "day": "2026-10-15",
+      "day": "2026-10-16",
       "day_start_total": 1342,
       "delta": 0
     },
@@ -93,7 +93,7 @@
         "Telegram": 4
       },
       "total": 854,
-      "day": "2026-10-15",
+      "day": "2026-10-16",
       "day_start_total": 854,
       "delta": 0
     },
@@ -102,32 +102,32 @@
       "date": "2026-10-02",
       "platforms": {
         "YouTube": 840,
-        "TikTok": 275,
+        "TikTok": 276,
         "Instagram": 117,
         "Facebook": 243,
         "Threads": 0,
         "Telegram": 4
       },
-      "total": 1479,
-      "day": "2026-10-15",
+      "total": 1480,
+      "day": "2026-10-16",
       "day_start_total": 1479,
-      "delta": 0
+      "delta": 1
     },
     "Восточный ролик": {
       "title": "Восточный ролик",
       "date": "2026-10-01",
       "platforms": {
         "YouTube": 256,
-        "TikTok": 254,
+        "TikTok": 255,
         "Instagram": 17,
         "Facebook": 264,
         "Threads": 3,
         "Telegram": 4
       },
-      "total": 798,
-      "day": "2026-10-15",
+      "total": 799,
+      "day": "2026-10-16",
       "day_start_total": 798,
-      "delta": 0
+      "delta": 1
     },
     "Ретро скорпионс": {
       "title": "Ретро скорпионс",
@@ -139,7 +139,7 @@
         "Threads": 2
       },
       "total": 502,
-      "day": "2026-10-15",
+      "day": "2026-10-16",
       "day_start_total": 502,
       "delta": 0
     },
@@ -155,7 +155,7 @@
         "Telegram": 4
       },
       "total": 1926,
-      "day": "2026-10-15",
+      "day": "2026-10-16",
       "day_start_total": 1926,
       "delta": 0
     },
@@ -171,7 +171,7 @@
         "Telegram": 4
       },
       "total": 1429,
-      "day": "2026-10-15",
+      "day": "2026-10-16",
       "day_start_total": 1429,
       "delta": 0
     },
@@ -187,9 +187,9 @@
         "Telegram": 5
       },
       "total": 440,
-      "day": "2026-10-15",
-      "day_start_total": 439,
-      "delta": 1
+      "day": "2026-10-16",
+      "day_start_total": 440,
+      "delta": 0
     },
     "Крыша": {
       "title": "Крыша",
@@ -203,7 +203,7 @@
         "Telegram": 5
       },
       "total": 732,
-      "day": "2026-10-15",
+      "day": "2026-10-16",
       "day_start_total": 732,
       "delta": 0
     },
@@ -218,9 +218,9 @@
         "Facebook": 369
       },
       "total": 2684,
-      "day": "2026-10-15",
-      "day_start_total": 2683,
-      "delta": 1
+      "day": "2026-10-16",
+      "day_start_total": 2684,
+      "delta": 0
     }
   }
 }
