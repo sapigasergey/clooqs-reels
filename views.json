@@ -1,21 +1,21 @@
 {
-  "updated": "2026-10-16T21:08+03:00",
+  "updated": "2026-10-17T21:08+03:00",
   "items": {
     "Панк-коллаж": {
       "title": "Панк-коллаж",
       "date": "2026-10-08",
       "platforms": {
-        "YouTube": 93,
+        "YouTube": 94,
         "Instagram": 10,
         "TikTok": 266,
         "Facebook": 259,
         "Threads": 10,
         "Telegram": 3
       },
-      "total": 641,
-      "day": "2026-10-16",
-      "day_start_total": 639,
-      "delta": 2
+      "total": 642,
+      "day": "2026-10-17",
+      "day_start_total": 641,
+      "delta": 1
     },
     "Девушка на верблюде": {
       "title": "Девушка на верблюде",
@@ -29,7 +29,7 @@
         "Telegram": 3
       },
       "total": 709,
-      "day": "2026-10-16",
+      "day": "2026-10-17",
       "day_start_total": 709,
       "delta": 0
     },
@@ -45,7 +45,7 @@
         "Telegram": 3
       },
       "total": 1207,
-      "day": "2026-10-16",
+      "day": "2026-10-17",
       "day_start_total": 1207,
       "delta": 0
     },
@@ -61,9 +61,9 @@
         "Telegram": 3
       },
       "total": 1323,
-      "day": "2026-10-16",
-      "day_start_total": 1322,
-      "delta": 1
+      "day": "2026-10-17",
+      "day_start_total": 1323,
+      "delta": 0
     },
     "Лето осень": {
       "title": "Лето осень",
@@ -71,15 +71,15 @@
       "platforms": {
         "YouTube": 142,
         "TikTok": 774,
-        "Instagram": 126,
+        "Instagram": 128,
         "Facebook": 296,
         "Threads": 0,
         "Telegram": 4
       },
-      "total": 1342,
-      "day": "2026-10-16",
+      "total": 1344,
+      "day": "2026-10-17",
       "day_start_total": 1342,
-      "delta": 0
+      "delta": 2
     },
     "Трико": {
       "title": "Трико",
@@ -93,7 +93,7 @@
         "Telegram": 4
       },
       "total": 854,
-      "day": "2026-10-16",
+      "day": "2026-10-17",
       "day_start_total": 854,
       "delta": 0
     },
@@ -109,9 +109,9 @@
         "Telegram": 4
       },
       "total": 1480,
-      "day": "2026-10-16",
-      "day_start_total": 1479,
-      "delta": 1
+      "day": "2026-10-17",
+      "day_start_total": 1480,
+      "delta": 0
     },
     "Восточный ролик": {
       "title": "Восточный ролик",
@@ -125,9 +125,9 @@
         "Telegram": 4
       },
       "total": 799,
-      "day": "2026-10-16",
-      "day_start_total": 798,
-      "delta": 1
+      "day": "2026-10-17",
+      "day_start_total": 799,
+      "delta": 0
     },
     "Ретро скорпионс": {
       "title": "Ретро скорпионс",
@@ -139,7 +139,7 @@
         "Threads": 2
       },
       "total": 502,
-      "day": "2026-10-16",
+      "day": "2026-10-17",
       "day_start_total": 502,
       "delta": 0
     },
@@ -155,7 +155,7 @@
         "Telegram": 4
       },
       "total": 1926,
-      "day": "2026-10-16",
+      "day": "2026-10-17",
       "day_start_total": 1926,
       "delta": 0
     },
@@ -171,7 +171,7 @@
         "Telegram": 4
       },
       "total": 1429,
-      "day": "2026-10-16",
+      "day": "2026-10-17",
       "day_start_total": 1429,
       "delta": 0
     },
@@ -187,7 +187,7 @@
         "Telegram": 5
       },
       "total": 440,
-      "day": "2026-10-16",
+      "day": "2026-10-17",
       "day_start_total": 440,
       "delta": 0
     },
@@ -203,7 +203,7 @@
         "Telegram": 5
       },
       "total": 732,
-      "day": "2026-10-16",
+      "day": "2026-10-17",
       "day_start_total": 732,
       "delta": 0
     },
@@ -218,7 +218,7 @@
         "Facebook": 369
       },
       "total": 2684,
-      "day": "2026-10-16",
+      "day": "2026-10-17",
       "day_start_total": 2684,
       "delta": 0
     }
