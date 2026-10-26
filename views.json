@@ -1,21 +1,21 @@
 {
-  "updated": "2026-10-25T23:43+03:00",
+  "updated": "2026-10-26T21:08+03:00",
   "items": {
     "Панк-коллаж": {
       "title": "Панк-коллаж",
       "date": "2026-10-08",
       "platforms": {
-        "YouTube": 94,
+        "YouTube": 96,
         "Instagram": 12,
         "TikTok": 270,
         "Facebook": 259,
         "Threads": 10,
         "Telegram": 3
       },
-      "total": 648,
-      "day": "2026-10-25",
+      "total": 650,
+      "day": "2026-10-26",
       "day_start_total": 648,
-      "delta": 0
+      "delta": 2
     },
     "Девушка на верблюде": {
       "title": "Девушка на верблюде",
@@ -29,25 +29,25 @@
         "Telegram": 3
       },
       "total": 728,
-      "day": "2026-10-25",
-      "day_start_total": 726,
-      "delta": 2
+      "day": "2026-10-26",
+      "day_start_total": 728,
+      "delta": 0
     },
     "Вжух": {
       "title": "Вжух",
       "date": "2026-10-06",
       "platforms": {
         "YouTube": 610,
-        "TikTok": 257,
+        "TikTok": 258,
         "Instagram": 134,
         "Facebook": 205,
         "Threads": 0,
         "Telegram": 3
       },
-      "total": 1209,
-      "day": "2026-10-25",
+      "total": 1210,
+      "day": "2026-10-26",
       "day_start_total": 1209,
-      "delta": 0
+      "delta": 1
     },
     "Пальто из маминого шкафа": {
       "title": "Пальто из маминого шкафа",
@@ -61,7 +61,7 @@
         "Telegram": 3
       },
       "total": 1325,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 1325,
       "delta": 0
     },
@@ -77,7 +77,7 @@
         "Telegram": 4
       },
       "total": 1345,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 1345,
       "delta": 0
     },
@@ -93,7 +93,7 @@
         "Telegram": 4
       },
       "total": 855,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 855,
       "delta": 0
     },
@@ -109,7 +109,7 @@
         "Telegram": 4
       },
       "total": 1482,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 1482,
       "delta": 0
     },
@@ -125,7 +125,7 @@
         "Telegram": 4
       },
       "total": 800,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 800,
       "delta": 0
     },
@@ -139,7 +139,7 @@
         "Threads": 2
       },
       "total": 502,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 502,
       "delta": 0
     },
@@ -155,7 +155,7 @@
         "Telegram": 4
       },
       "total": 1926,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 1926,
       "delta": 0
     },
@@ -171,7 +171,7 @@
         "Telegram": 4
       },
       "total": 1429,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 1429,
       "delta": 0
     },
@@ -187,7 +187,7 @@
         "Telegram": 5
       },
       "total": 440,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 440,
       "delta": 0
     },
@@ -203,7 +203,7 @@
         "Telegram": 5
       },
       "total": 732,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 732,
       "delta": 0
     },
@@ -218,7 +218,7 @@
         "Facebook": 369
       },
       "total": 2684,
-      "day": "2026-10-25",
+      "day": "2026-10-26",
       "day_start_total": 2684,
       "delta": 0
     }
