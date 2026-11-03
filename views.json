@@ -1,21 +1,21 @@
 {
-  "updated": "2026-11-02T21:08+03:00",
+  "updated": "2026-11-03T21:09+03:00",
   "items": {
     "Панк-коллаж": {
       "title": "Панк-коллаж",
       "date": "2026-10-08",
       "platforms": {
         "YouTube": 96,
-        "Instagram": 17,
+        "Instagram": 18,
         "TikTok": 271,
         "Facebook": 259,
         "Threads": 10,
         "Telegram": 3
       },
-      "total": 656,
-      "day": "2026-11-02",
+      "total": 657,
+      "day": "2026-11-03",
       "day_start_total": 656,
-      "delta": 0
+      "delta": 1
     },
     "Девушка на верблюде": {
       "title": "Девушка на верблюде",
@@ -23,14 +23,14 @@
       "platforms": {
         "YouTube": 191,
         "TikTok": 265,
-        "Instagram": 41,
+        "Instagram": 42,
         "Facebook": 239,
         "Threads": 1,
         "Telegram": 3
       },
-      "total": 740,
-      "day": "2026-11-02",
-      "day_start_total": 739,
+      "total": 741,
+      "day": "2026-11-03",
+      "day_start_total": 740,
       "delta": 1
     },
     "Вжух": {
@@ -38,16 +38,16 @@
       "date": "2026-10-06",
       "platforms": {
         "YouTube": 610,
-        "TikTok": 258,
-        "Instagram": 140,
+        "TikTok": 259,
+        "Instagram": 141,
         "Facebook": 205,
         "Threads": 0,
         "Telegram": 3
       },
-      "total": 1216,
-      "day": "2026-11-02",
+      "total": 1218,
+      "day": "2026-11-03",
       "day_start_total": 1216,
-      "delta": 0
+      "delta": 2
     },
     "Пальто из маминого шкафа": {
       "title": "Пальто из маминого шкафа",
@@ -55,15 +55,15 @@
       "platforms": {
         "YouTube": 700,
         "TikTok": 233,
-        "Instagram": 152,
+        "Instagram": 153,
         "Facebook": 245,
         "Threads": 1,
         "Telegram": 3
       },
-      "total": 1334,
-      "day": "2026-11-02",
+      "total": 1335,
+      "day": "2026-11-03",
       "day_start_total": 1334,
-      "delta": 0
+      "delta": 1
     },
     "Лето осень": {
       "title": "Лето осень",
@@ -77,7 +77,7 @@
         "Telegram": 4
       },
       "total": 1360,
-      "day": "2026-11-02",
+      "day": "2026-11-03",
       "day_start_total": 1360,
       "delta": 0
     },
@@ -87,15 +87,15 @@
       "platforms": {
         "YouTube": 334,
         "TikTok": 267,
-        "Instagram": 26,
+        "Instagram": 27,
         "Facebook": 237,
         "Threads": 2,
         "Telegram": 4
       },
-      "total": 870,
-      "day": "2026-11-02",
+      "total": 871,
+      "day": "2026-11-03",
       "day_start_total": 870,
-      "delta": 0
+      "delta": 1
     },
     "Замок и туфли": {
       "title": "Замок и туфли",
@@ -109,7 +109,7 @@
         "Telegram": 4
       },
       "total": 1489,
-      "day": "2026-11-02",
+      "day": "2026-11-03",
       "day_start_total": 1489,
       "delta": 0
     },
@@ -125,7 +125,7 @@
         "Telegram": 4
       },
       "total": 804,
-      "day": "2026-11-02",
+      "day": "2026-11-03",
       "day_start_total": 804,
       "delta": 0
     },
@@ -139,7 +139,7 @@
         "Threads": 2
       },
       "total": 506,
-      "day": "2026-11-02",
+      "day": "2026-11-03",
       "day_start_total": 506,
       "delta": 0
     },
@@ -155,7 +155,7 @@
         "Telegram": 4
       },
       "total": 1931,
-      "day": "2026-11-02",
+      "day": "2026-11-03",
       "day_start_total": 1931,
       "delta": 0
     },
@@ -171,7 +171,7 @@
         "Telegram": 4
       },
       "total": 1432,
-      "day": "2026-11-02",
+      "day": "2026-11-03",
       "day_start_total": 1432,
       "delta": 0
     },
@@ -187,7 +187,7 @@
         "Telegram": 5
       },
       "total": 445,
-      "day": "2026-11-02",
+      "day": "2026-11-03",
       "day_start_total": 445,
       "delta": 0
     },
@@ -203,7 +203,7 @@
         "Telegram": 5
       },
       "total": 737,
-      "day": "2026-11-02",
+      "day": "2026-11-03",
       "day_start_total": 737,
       "delta": 0
     },
@@ -218,7 +218,7 @@
         "Facebook": 369
       },
       "total": 2688,
-      "day": "2026-11-02",
+      "day": "2026-11-03",
       "day_start_total": 2688,
       "delta": 0
     }
