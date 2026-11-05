@@ -4,6 +4,7 @@
   Buffer  — Instagram, TikTok, YouTube: пост на сегодня, статус, живая ссылка;
   Zernio  — Facebook, Threads: то же;
   Telegram — сегодняшняя запись telegram-queue.json отправлена и видна на t.me/s/clooqs;
+  VK      — сегодняшняя запись vk-queue.json выложена маком (scripts/vk_post.py), просмотры — vk-views.json;
   очередь — на сколько дней вперёд что-то запланировано.
 Итог — сообщение в пульт «Клукс · выпуск». Если всё вышло — тихое, если нет — со звуком и причинами.
 Секреты: BUFFER_API_KEY, ZERNIO_API_KEY, TELEGRAM_BOT_TOKEN.
@@ -176,6 +177,24 @@ def check_telegram(today, results, future_days):
     results.append(('Telegram', not square, 'вышло, но КВАДРАТОМ — надо перезалить с размерами' if square else 'вышло', url))
 
 
+def check_vk(today, results, future_days):
+    """VK выкладывает мак (scripts/vk_post.py, ключ VK только на маке) и пишет итог в vk-queue.json."""
+    start, end = day_bounds(today)
+    queue = json.load(open('vk-queue.json')) if os.path.exists('vk-queue.json') else []
+    for i in queue:
+        if parse(i['at']) >= end and not i.get('post_id'):
+            future_days.add(parse(i['at']).astimezone(MSK).date())
+    todays = [i for i in queue if start <= parse(i['at']) < end]
+    if not todays:
+        results.append(('VK', False, 'на сегодня в очереди VK ничего нет', None))
+        return
+    i = todays[-1]
+    if not i.get('post_id'):
+        results.append(('VK', False, i.get('last_error') or 'мак не выложил (спал или не было сети?)', None))
+        return
+    results.append(('VK', not i.get('last_error'), i.get('last_error') or 'вышло', i.get('link')))
+
+
 def send(text, loud):
     if DRY:
         print(text)
@@ -259,6 +278,11 @@ def collect_views(now):
         if 'video' in i and i.get('sent') and isinstance(i.get('message_id'), int) and i['message_id'] in tg:
             add(i.get('caption', ''), parse(i['at']), 'Telegram', tg[i['message_id']])
 
+    # VK: просмотры собирает мак (scripts/vk_post.py views → vk-views.json), здесь только читаем
+    if os.path.exists('vk-views.json'):
+        for c in json.load(open('vk-views.json')).get('clips', []):
+            add(c.get('caption', ''), parse(c['date']), 'VK', c.get('views'))
+
     merged = {}  # один ролик мог выйти с разными подписями (Скорпионс руками) — склеиваем по названию
     for it in items.values():
         m = merged.setdefault(it['title'], {'title': it['title'], 'date': it['date'], 'platforms': {}})
@@ -307,7 +331,7 @@ def main():
         print('сегодня уже проверяли')  # второй запуск cron — страховка, если первый GitHub пропустил
         return
     results, future_days, crashes = [], set(), []
-    for name, fn in (('Buffer', check_buffer), ('Zernio', check_zernio), ('Telegram', check_telegram)):
+    for name, fn in (('Buffer', check_buffer), ('Zernio', check_zernio), ('Telegram', check_telegram), ('VK', check_vk)):
         try:
             fn(today, results, future_days)
         except Exception as e:
@@ -327,8 +351,6 @@ def main():
         for name, ok, note, url in results:
             lines.append('%s %s — %s%s' % ('✅' if ok else '❌', name, note, (' ' + url) if url else ''))
     lines += [''] + crashes if crashes else []
-    lines.append('')
-    lines.append('VK ставишь ты — проверь клип: https://vk.com/clips-45457184')
     ahead = sorted(d for d in future_days if d > today)
     if len(ahead) < QUEUE_DAYS_MIN:
         lines.append('')
