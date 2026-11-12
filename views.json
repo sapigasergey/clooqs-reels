@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T21:08+03:00",
+  "updated": "2026-11-12T21:08+03:00",
   "items": {
     "Панк-коллаж": {
       "title": "Панк-коллаж",
@@ -14,41 +14,41 @@
         "VK": 80
       },
       "total": 742,
-      "day": "2026-11-11",
-      "day_start_total": 741,
-      "delta": 1
+      "day": "2026-11-12",
+      "day_start_total": 742,
+      "delta": 0
     },
     "Девушка на верблюде": {
       "title": "Девушка на верблюде",
       "date": "2026-10-07",
       "platforms": {
         "YouTube": 191,
-        "TikTok": 266,
+        "TikTok": 267,
         "Instagram": 43,
         "Facebook": 239,
         "Threads": 1,
         "Telegram": 3
       },
-      "total": 743,
-      "day": "2026-11-11",
+      "total": 744,
+      "day": "2026-11-12",
       "day_start_total": 743,
-      "delta": 0
+      "delta": 1
     },
     "Вжух": {
       "title": "Вжух",
       "date": "2026-10-06",
       "platforms": {
         "YouTube": 611,
-        "TikTok": 259,
+        "TikTok": 262,
         "Instagram": 141,
         "Facebook": 205,
         "Threads": 0,
         "Telegram": 3
       },
-      "total": 1219,
-      "day": "2026-11-11",
-      "day_start_total": 1218,
-      "delta": 1
+      "total": 1222,
+      "day": "2026-11-12",
+      "day_start_total": 1219,
+      "delta": 3
     },
     "Пальто из маминого шкафа": {
       "title": "Пальто из маминого шкафа",
@@ -63,7 +63,7 @@
         "VK": 78
       },
       "total": 1414,
-      "day": "2026-11-11",
+      "day": "2026-11-12",
       "day_start_total": 1414,
       "delta": 0
     },
@@ -80,9 +80,9 @@
         "VK": 51
       },
       "total": 1415,
-      "day": "2026-11-11",
-      "day_start_total": 1413,
-      "delta": 2
+      "day": "2026-11-12",
+      "day_start_total": 1415,
+      "delta": 0
     },
     "Трико": {
       "title": "Трико",
@@ -97,7 +97,7 @@
         "VK": 48
       },
       "total": 922,
-      "day": "2026-11-11",
+      "day": "2026-11-12",
       "day_start_total": 922,
       "delta": 0
     },
@@ -114,9 +114,9 @@
         "VK": 37
       },
       "total": 1528,
-      "day": "2026-11-11",
-      "day_start_total": 1527,
-      "delta": 1
+      "day": "2026-11-12",
+      "day_start_total": 1528,
+      "delta": 0
     },
     "Восточный ролик": {
       "title": "Восточный ролик",
@@ -131,7 +131,7 @@
         "VK": 58
       },
       "total": 865,
-      "day": "2026-11-11",
+      "day": "2026-11-12",
       "day_start_total": 865,
       "delta": 0
     },
@@ -146,7 +146,7 @@
         "VK": 228
       },
       "total": 737,
-      "day": "2026-11-11",
+      "day": "2026-11-12",
       "day_start_total": 737,
       "delta": 0
     },
@@ -155,17 +155,17 @@
       "date": "2026-09-30",
       "platforms": {
         "YouTube": 1392,
-        "TikTok": 251,
+        "TikTok": 252,
         "Instagram": 74,
         "Threads": 1,
         "Facebook": 210,
         "Telegram": 4,
         "VK": 43
       },
-      "total": 1975,
-      "day": "2026-11-11",
+      "total": 1976,
+      "day": "2026-11-12",
       "day_start_total": 1975,
-      "delta": 0
+      "delta": 1
     },
     "Бали": {
       "title": "Бали",
@@ -180,9 +180,9 @@
         "VK": 32
       },
       "total": 1468,
-      "day": "2026-11-11",
-      "day_start_total": 1466,
-      "delta": 2
+      "day": "2026-11-12",
+      "day_start_total": 1468,
+      "delta": 0
     },
     "Платок": {
       "title": "Платок",
@@ -197,7 +197,7 @@
         "VK": 57
       },
       "total": 504,
-      "day": "2026-11-11",
+      "day": "2026-11-12",
       "day_start_total": 504,
       "delta": 0
     },
@@ -213,7 +213,7 @@
         "Telegram": 5
       },
       "total": 740,
-      "day": "2026-11-11",
+      "day": "2026-11-12",
       "day_start_total": 740,
       "delta": 0
     },
@@ -229,7 +229,7 @@
         "VK": 103
       },
       "total": 2794,
-      "day": "2026-11-11",
+      "day": "2026-11-12",
       "day_start_total": 2794,
       "delta": 0
     }
